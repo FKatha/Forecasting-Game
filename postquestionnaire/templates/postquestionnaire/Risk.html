@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Questionnaire
+{% endblock %}
+
+{% block content %}
+    <p>
+        Please answer the following questions <strong>truthfully</strong> and
+        as <strong>informative</strong> as possible
+        to help the researcher gain a better understanding of the participants.
+    </p>
+    <p>
+        All data will be kept anonymous and will be used solely for the purpose of my master's thesis.
+    </p>
+    <p>
+    Feel free to answer the open questions in English or German.
+    </p>
+
+    {% formfield player.risky%}
+    {% formfield player.risky2%}
+
+    {% next_button %}
+
+{% endblock %}
